@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        // create variable to count number of inputs
+        var count = 1;
+
+        // this function create new fields
+        function addNewField(){
+
+            // increase value number of inputs
+            count = count + 1;
+
+            // create element label
+            var label1 = document.createElement("label");
+            // adding HTML value to the label. The value consider the number of inputs 
+            label1.innerHTML= "Name " + count + ":";
+
+            // create element input assiging values to attributes type and id
+            var input= document.createElement("input");
+            input.type= "text";
+            input.id= "name" + count;
+
+            // using DOM we add elements label and input
+            document.getElementById("form1").appendChild(label1);
+            document.getElementById("form1").appendChild(input);
+        }
+    </script>
+
+</head>
+<body>
+    <input id="add" type="button" value="Add new field" onclick="addNewField();" />
+</br>
+</br>
+    <form id="form1" action="index2.html">
+
+        <label for="name1">Name 1:</label>
+        <input type="text" id="name1">
+
+        </br>
+        </br>
+
+        <input type="submit" value="Submit">
+</form>
+</body>
+</html>
